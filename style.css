@@ -1,32 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at top, #111827, #0f172a, #020617);
+  color: white;
+}
+
+.container {
   text-align: center;
-  background-color: #f2f2f2;
-  padding-top: 50px;
 }
 
-#game {
-  max-width: 400px;
-  margin: auto;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 10px #aaa;
+.title {
+  font-size: 42px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
-#question {
-  font-size: 24px;
-  margin-bottom: 20px;
+.subtitle {
+  font-size: 20px;
+  opacity: 0.8;
+  margin-bottom: 25px;
 }
 
-#choices button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  font-size: 18px;
+.card {
+  width: 360px;
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-#score, #timer {
-  margin-top: 15px;
+/* Timer */
+#timer {
+  font-size: 22px;
   font-weight: bold;
+  color: #facc15;
+  margin-bottom: 10px;
+}
+
+/* Score */
+#score {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+/* Question */
+#question {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #60a5fa;
+}
+
+/* Choices */
+#choices button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+
+  transition: 0.25s;
+}
+
+#choices button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #22c55e, #3b82f6);
+}
+
+/* Glow effect when hovered */
+#choices button:active {
+  transform: scale(0.98);
 }
